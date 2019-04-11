@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_reminder_disabled"
+        android:title="@string/reminder_option_disabled" />
+
+    <item
+        android:id="@+id/item_reminder_five_minutes"
+        android:title="@string/reminder_option_5min" />
+    <item
+        android:id="@+id/item_reminder_ten_minutes"
+        android:title="@string/reminder_option_10min" />
+    <item
+        android:id="@+id/item_reminder_thirty_minutes"
+        android:title="@string/reminder_option_30min" />
+
+    <item
+        android:id="@+id/item_reminder_hour"
+        android:title="@string/reminder_option_hour" />
+
+</menu>

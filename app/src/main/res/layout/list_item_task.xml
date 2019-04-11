@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlContainer_LIT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        android:layout_marginTop="@dimen/spacing_main">
+
+        <TextView
+            android:id="@+id/tvTitle_LIT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_toStartOf="@+id/ivArrow_LIT"
+            android:layout_marginTop="@dimen/spacing_simple"
+            android:textColor="@color/controlsDark"
+            tools:text="Meeting with clients for discussing" />
+
+        <TextView
+            android:id="@+id/tvDueTo_LIT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle_LIT"
+            android:layout_marginTop="@dimen/spacing_simple"
+            android:text="@string/label_due_to" />
+
+        <TextView
+            android:id="@+id/tvDate_LIT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle_LIT"
+            android:layout_marginStart="@dimen/spacing_simple"
+            android:layout_marginTop="@dimen/spacing_simple"
+            android:layout_toEndOf="@+id/tvDueTo_LIT"
+            android:textColor="@color/controlsDark"
+            tools:text="22/03/19" />
+
+        <TextView
+            android:id="@+id/tvPriority_LIT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle_LIT"
+            android:layout_marginStart="@dimen/spacing_main"
+            android:layout_marginTop="@dimen/spacing_simple"
+            android:layout_toEndOf="@+id/tvDate_LIT"
+            android:drawablePadding="@dimen/spacing_small"
+            android:textColor="@color/controlsDark"
+            tools:text="High" />
+
+        <ImageView
+            android:id="@+id/ivArrow_LIT"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector_chevron_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlContainer_LIT"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:background="@color/background_item_stroke" />
+
+</RelativeLayout>

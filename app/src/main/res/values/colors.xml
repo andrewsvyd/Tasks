@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#a2bdcd</color>
+    <color name="colorPrimaryDark">#698290</color>
+    <color name="colorAccent">#72B8E2</color>
+    <color name="background_item_stroke">#d1d1d1</color>
+    <color name="background_list">#e1e1e1</color>
+    <color name="background_list_header">#f2f2f2</color>
+    <color name="colorTitle">#0E3349</color>
+    <color name="controlsDark">#0E3349</color>
+    <color name="controlsGrey">#627985</color>
+    <color name="background_item_delete">#E53935</color>
+</resources>

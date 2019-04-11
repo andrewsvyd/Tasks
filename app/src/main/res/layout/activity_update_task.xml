@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:id="@+id/rlContainer_AUT"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_AET"
+        style="@style/ToolbarDefault">
+
+        <TextView
+            android:id="@+id/tvTitle_AET"
+            style="@style/ToolbarTextStyle"
+            tools:text="@string/title_edit_task" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/flTextContainer_AET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_below="@+id/toolbar_AET"
+        android:background="?attr/colorPrimary">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTitle_AUT"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_main"
+            android:layout_marginEnd="@dimen/spacing_main"
+            android:layout_marginBottom="@dimen/spacing_main"
+            android:textColorHint="@color/colorTitle"
+            app:boxStrokeColor="@color/colorTitle"
+            app:counterOverflowTextColor="@color/colorTitle"
+            app:counterTextColor="@color/colorTitle"
+            app:hintTextColor="@color/colorTitle">
+
+            <EditText
+                android:id="@+id/etTitle_AUT"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:hint="@string/hint_edit_task_title"
+                android:gravity="top"
+                android:maxLength="255"
+                android:inputType="textCapSentences|textMultiLine"
+                android:textColor="@color/colorTitle"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvPriorityLabel_AET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flTextContainer_AET"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        android:layout_marginBottom="@dimen/spacing_simple"
+        android:text="@string/label_priority" />
+
+    <RadioGroup
+        android:id="@+id/rgPriority_AUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rbMedium_AET"
+        android:layout_below="@+id/tvPriorityLabel_AET"
+        android:layout_marginStart="@dimen/spacing_main">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbHigh_AET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/priority_label_high" />
+
+        <RadioButton
+            android:id="@+id/rbMedium_AET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/priority_label_medium" />
+
+        <RadioButton
+            android:id="@+id/rbLow_AET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/priority_label_low" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDueTo_AUT"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgPriority_AUT"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginTop="@dimen/spacing_simple"
+        android:layout_marginEnd="@dimen/spacing_main"
+        app:endIconDrawable="@drawable/vector_check">
+
+        <EditText
+            android:drawableEnd="@drawable/vector_calendar"
+            android:id="@+id/etDueTo_AUT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:gravity="bottom"
+            android:textColor="@color/controlsDark"
+            android:hint="@string/hint_due_to"
+            android:inputType="textMultiLine"
+            android:longClickable="false"
+            tools:ignore="Autofill" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilReminder_AUT"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilDueTo_AUT"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        app:endIconDrawable="@drawable/vector_check">
+
+        <EditText
+            android:drawableEnd="@drawable/vector_reminder"
+            android:id="@+id/etReminder_AUT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:gravity="bottom"
+            android:textColor="@color/controlsDark"
+            android:hint="@string/hint_reminder"
+            android:inputType="textMultiLine"
+            android:longClickable="false"
+            tools:ignore="Autofill" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

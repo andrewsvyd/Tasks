@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlContainer_ATD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_ATD"
+        style="@style/ToolbarDefault">
+
+        <TextView
+            android:id="@+id/tvTitle_AET"
+            style="@style/ToolbarTextStyle"
+            android:text="@string/title_task_details" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/flTextContainer_ATD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_ATD"
+        android:animateLayoutChanges="true"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/tvText_ATD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_main"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_large"
+            tools:text="We are going to the airport on Sunday at noon. How are in a good way to get the same time I don't have a car so I can get the money to get a ride." />
+
+    </FrameLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPriority_ATD"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flTextContainer_ATD"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        app:endIconDrawable="@drawable/vector_check">
+
+        <EditText
+            android:id="@+id/etPriority_ATD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/vector_priority_high"
+            android:focusable="false"
+            android:gravity="bottom"
+            tools:text="High"
+            android:hint="@string/hint_priority"
+            android:inputType="textMultiLine"
+            android:longClickable="false"
+            android:textColor="@color/controlsDark"
+            tools:ignore="Autofill" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDueTo_ATD"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilPriority_ATD"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        app:endIconDrawable="@drawable/vector_check">
+
+        <EditText
+            android:id="@+id/etDueTo_ATD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/vector_calendar"
+            android:focusable="false"
+            android:gravity="bottom"
+            tools:text="28/03/2019"
+            android:hint="@string/hint_due_to"
+            android:inputType="textMultiLine"
+            android:longClickable="false"
+            android:textColor="@color/controlsDark"
+            tools:ignore="Autofill" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilReminder_ATD"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilDueTo_ATD"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        app:endIconDrawable="@drawable/vector_check">
+
+        <EditText
+            android:drawableEnd="@drawable/vector_reminder"
+            android:id="@+id/etReminder_ATD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:gravity="bottom"
+            android:textColor="@color/controlsDark"
+            android:hint="@string/hint_reminder"
+            android:inputType="textMultiLine"
+            android:longClickable="false"
+            tools:ignore="Autofill" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDeleteTask_ATD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/spacing_main"
+        android:src="@drawable/vector_delete" />
+
+</RelativeLayout>

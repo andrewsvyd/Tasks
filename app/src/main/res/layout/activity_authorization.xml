@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlLoginContainer_AA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail_AA"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tilPassword_AA"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/spacing_huge"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_huge"
+        app:endIconDrawable="@drawable/vector_check">
+
+        <EditText
+            android:id="@+id/etName_AA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/etPassword_AA"
+            android:drawableEnd="@drawable/vector_email"
+            android:ems="10"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/text_size_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword_AA"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llLoginSwitch_AA"
+        android:layout_marginStart="@dimen/spacing_huge"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_huge"
+        app:endIconDrawable="@drawable/vector_check">
+
+        <EditText
+            android:id="@+id/etPassword_AA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/vector_password"
+            android:drawablePadding="@dimen/spacing_simple"
+            android:ems="10"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_size_medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:id="@+id/llLoginSwitch_AA"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/credential_field_size"
+        android:layout_above="@+id/tvLogIn_AA"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/spacing_huge"
+        android:layout_marginTop="@dimen/spacing_simple"
+        android:layout_marginEnd="@dimen/spacing_huge"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/text_login_switch"
+            android:textColor="@color/controlsDark"
+            android:textSize="@dimen/text_size_medium" />
+
+        <Switch
+            android:id="@+id/swLoginRegister_AA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvLogIn_AA"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/shape_button_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/btn_log_in"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

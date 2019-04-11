@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlContainer_LIR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        android:layout_marginTop="@dimen/spacing_main">
+
+        <TextView
+            android:id="@+id/tvTitle_LIR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/spacing_simple"
+            android:textColor="@color/controlsDark"
+            tools:text="Meeting with clients for discussing the project" />
+
+        <TextView
+            android:id="@+id/tvDueTo_LIR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle_LIR"
+            android:layout_marginTop="@dimen/spacing_simple"
+            android:text="@string/label_notification" />
+
+        <TextView
+            android:id="@+id/tvRemindBefore_LIR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle_LIR"
+            android:layout_marginStart="@dimen/spacing_simple"
+            android:layout_marginTop="@dimen/spacing_simple"
+            android:layout_toEndOf="@+id/tvDueTo_LIR"
+            android:textColor="@color/controlsDark"
+            tools:text="10 minutes before" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginStart="@dimen/spacing_main"
+        android:layout_marginEnd="@dimen/spacing_main"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlContainer_LIR"
+        android:layout_marginTop="@dimen/spacing_main"
+        android:background="@color/background_item_stroke" />
+
+</RelativeLayout>

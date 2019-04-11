@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlContainer_AS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_AS"
+        style="@style/ToolbarDefault">
+
+        <TextView
+            android:id="@+id/tvTitle_AET"
+            style="@style/ToolbarTextStyle"
+            android:text="@string/title_settings" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_AS"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlItemSortingBy_AS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSortByPropertyTitle_AS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_main"
+                android:layout_marginTop="@dimen/spacing_main"
+                android:text="@string/title_sort_by_property"
+                android:textColor="@color/controlsGrey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSortByPropertyDescription_AS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSortByPropertyTitle_AS"
+                android:layout_marginStart="@dimen/spacing_main"
+                android:layout_marginBottom="@dimen/spacing_main"
+                android:textColor="@color/controlsGrey"
+                tools:text="Title" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/spacing_main"
+                android:src="@drawable/vector_chevron_right" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlItemOrder_AS"
+            android:background="?attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height">
+
+            <TextView
+                android:id="@+id/tvSortOrderTitle_AS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_main"
+                android:layout_marginTop="@dimen/spacing_main"
+                android:text="@string/title_sort_order"
+                android:textColor="@color/controlsGrey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSortOrderDescription_AS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSortOrderTitle_AS"
+                android:layout_marginStart="@dimen/spacing_main"
+                android:layout_marginBottom="@dimen/spacing_main"
+                android:textColor="@color/controlsGrey"
+                tools:text="Descending" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/spacing_main"
+                android:src="@drawable/vector_chevron_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/rlItemLogOut_AS"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_item_height">
+
+            <TextView
+                android:id="@+id/tvLogOut_AS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/spacing_main"
+                android:layout_marginTop="@dimen/spacing_main"
+                android:layout_marginBottom="@dimen/spacing_main"
+                android:text="@string/log_out"
+                android:textColor="@color/controlsGrey"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/spacing_main"
+                android:src="@drawable/vector_logout" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
