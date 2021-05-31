@@ -1,4 +1,6 @@
-## Structure
+## A project that serves as an architectural template with. support of offline mode.
+
+## Project structure
 
  - **data**
 
